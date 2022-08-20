@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script>
+      const array = [5, 9, 6, 8, 4, 6];
+      let sum = 0;
+
+      const sumArray = (arr, lengthArray) => {
+        if(lengthArray === 0) {
+          return console.log(`result SUM of array[`+ arr +`] is: `, 0);
+        }
+
+        sum += arr[lengthArray - 1];
+        
+        if(lengthArray - 1 == 0) {
+          return console.log(`result SUM of array[`+ arr +`] is: `, sum);
+        }
+
+        return sumArray(arr, lengthArray - 1);
+      }
+
+      sumArray(array, array.length);
+      
+    </script>
+  </head>
+</html>
